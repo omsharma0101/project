@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OM GAMERS HUB | Official Store</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0f0c29;color:#fff;overflow-x:hidden;scroll-behavior:smooth;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:#000;position:sticky;top:0;z-index:1000;border-bottom:2px solid #00f2ff;flex-wrap:wrap;}
+.logo{font-size:24px;font-weight:bold;color:#00f2ff;cursor:pointer;}
+.nav-links{display:flex;gap:10px;flex-wrap:wrap;}
+.nav-links button{padding:10px 14px;border:none;border-radius:8px;background:#7000ff;color:white;cursor:pointer;font-weight:bold;transition:.3s;}
+.nav-links button:hover{background:#00f2ff;color:#000;}
+section{display:none;padding:30px 5%;min-height:80vh;}
+#home{display:block;}
+.hero-slider{display:flex;overflow-x:auto;gap:20px;padding:20px 0;scroll-snap-type:x mandatory;}
+.hero-slider img{min-width:350px;height:220px;border-radius:18px;object-fit:cover;scroll-snap-align:start;}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:30px;}
+.card{background:rgba(255,255,255,0.06);padding:20px;border-radius:18px;text-align:center;transition:.3s;}
+.card:hover{transform:translateY(-10px);box-shadow:0 8px 20px rgba(0,242,255,.2);}
+.card img{width:100%;height:180px;object-fit:contain;}
+.price{color:#00ff88;font-size:22px;font-weight:bold;display:block;margin:12px 0;}
+.card button{width:100%;padding:10px;margin-top:8px;border:none;border-radius:8px;background:#7000ff;color:white;font-weight:bold;cursor:pointer;}
+.card button:hover{background:#00f2ff;color:black;}
+.list-box{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;}
+footer{text-align:center;padding:30px;background:#000;border-top:2px solid #7000ff;}
+</style>
+</head>
+<body><nav>
+<div class="logo" onclick="showPage('home')">🎮 OM GAMERS HUB</div>
+<div class="nav-links">
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('cart')">Cart (<span id='cartCount'>0</span>)</button>
+<button onclick="showPage('wishlist')">Watchlist (<span id='wishlistCount'>0</span>)</button>
+<button onclick="showPage('help')">Help</button>
+<button onclick="showPage('contact')">Contact</button>
+</div>
+</nav><section id="home">
+<h1>Level Up Your Gaming Setup</h1>
+<div class="hero-slider" id="slider">
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+<img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575">
+<img src="https://images.unsplash.com/photo-1603484477859-abe6a73f9366">
+<img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf">
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7">
+</div><div class="products">
+<!-- Extended product catalog starts -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/719pM8+fS7L._SL1500_.jpg">
+<h3>Zebronics Keyboard</h3>
+<span class="price">₹2899</span>
+<button onclick="addToCart('Zebronics Keyboard',2899)">Add to Cart</button>
+<button onclick="addWishlist('Zebronics Keyboard')">❤️ Watchlist</button>
+</div><div class="card">
+<img src="https://m.media-amazon.com/images/I/61Y3pS7u3XL._SL1500_.jpg">
+<h3>Hydra RGB Mouse</h3>
+<span class="price">₹849</span>
+<button onclick="addToCart('Hydra RGB Mouse',849)">Add to Cart</button>
+<button onclick="addWishlist('Hydra RGB Mouse')">❤️ Watchlist</button>
+</div><div class="card">
+<img src="https://m.media-amazon.com/images/I/71QDJHGf7CL._SL1500_.jpg">
+<h3>Gaming Headset</h3>
+<span class="price">₹1999</span>
+<button onclick="addToCart('Gaming Headset',1999)">Add to Cart</button>
+<button onclick="addWishlist('Gaming Headset')">❤️ Watchlist</button>
+</div><div class="card">
+<img src="https://m.media-amazon.com/images/I/61vv9vA5f9L._SL1500_.jpg">
+<h3>Redgear Mouse</h3>
+<span class="price">₹699</span>
+<button onclick="addToCart('Redgear Mouse',699)">Add to Cart</button>
+<button onclick="addWishlist('Redgear Mouse')">❤️ Watchlist</button>
+</div>
+</div><h2 style="margin-top:50px;">More Gaming Essentials</h2>
+<div class="products">
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71rJr6N6dFL._SL1500_.jpg">
+<h3>RGB Mouse Pad XL</h3>
+<span class="price">₹799</span>
+<button onclick="addToCart('RGB Mouse Pad XL',799)">Add to Cart</button>
+<button onclick="addWishlist('RGB Mouse Pad XL')">❤️ Watchlist</button>
+</div><div class="card">
+<img src="https://m.media-amazon.com/images/I/71wD9N0vQ-L._SL1500_.jpg">
+<h3>Wireless Controller</h3>
+<span class="price">₹1499</span>
+<button onclick="addToCart('Wireless Controller',1499)">Add to Cart</button>
+<button onclick="addWishlist('Wireless Controller')">❤️ Watchlist</button>
+</div><div class="card">
+<img src="https://m.media-amazon.com/images/I/61mNn9XNfEL._SL1500_.jpg">
+<h3>Compact Keyboard Pro</h3>
+<span class="price">₹1799</span>
+<button onclick="addToCart('Compact Keyboard Pro',1799)">Add to Cart</button>
+<button onclick="addWishlist('Compact Keyboard Pro')">❤️ Watchlist</button>
+</div><div class="card">
+<img src="https://m.media-amazon.com/images/I/61vv9vA5f9L._SL1500_.jpg">
+<h3>Gaming Mouse Ultra</h3>
+<span class="price">₹999</span>
+<button onclick="addToCart('Gaming Mouse Ultra',999)">Add to Cart</button>
+<button onclick="addWishlist('Gaming Mouse Ultra')">❤️ Watchlist</button>
+</div>
+</div><h2 style="margin-top:50px;">Customer Reviews</h2>
+<div class="list-box">
+<p>⭐⭐⭐⭐⭐ Amazing build quality and premium gaming products.</p><br>
+<p>⭐⭐⭐⭐ Great customer service and fast delivery.</p><br>
+<p>⭐⭐⭐⭐⭐ Best gaming accessories store for budget gamers.</p><br>
+<p>⭐⭐⭐⭐⭐ Loved the RGB collection and accessories.</p>
+</div><h2 style="margin-top:50px;">Why Choose OM Gamers Hub?</h2>
+<div class="list-box">
+<p>✔ Premium Gaming Accessories</p>
+<p>✔ Affordable Pricing</p>
+<p>✔ Fake Secure Checkout Experience</p>
+<p>✔ Watchlist and Cart System</p>
+<p>✔ Fast UI and Smooth Experience</p>
+</div>
+</section><section id="about"><h2>About Us</h2><p>OM Gamers Hub provides premium gaming accessories, keyboards, mice, headsets and setup essentials for gamers.</p></section>
+<section id="help"><h2>Help Center</h2><p>Need help? Contact us anytime on WhatsApp or email.</p></section>
+<section id="contact"><h2>Contact Us</h2><p>Email: oms977059@gmail.com</p><p>Mobile: 7982917803</p></section>
+<section id="wishlist"><h2>Your Watchlist</h2><div class="list-box" id="wishlistItems">No saved items</div></section>
+<section id="cart">
+<h2>Your Cart</h2>
+<div class="list-box" id="cartItems">Cart is empty</div>
+<h3 id="totalPrice">Total: ₹0</h3><div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+<button onclick="showPayment()" style="padding:12px 18px;border:none;border-radius:8px;background:#00f2ff;color:black;font-weight:bold;cursor:pointer;">Proceed to Payment</button>
+</div><div id="paymentBox" style="display:none;margin-top:25px;background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;">
+<h3>Select Payment Method</h3>
+<select id="paymentMethod" style="width:100%;padding:12px;margin:15px 0;border-radius:8px;border:none;">
+<option>UPI Payment</option>
+<option>Credit / Debit Card</option>
+<option>Cash on Delivery</option>
+<option>Net Banking</option>
+</select>
+<input type="text" placeholder="Enter Name" style="width:100%;padding:12px;margin-bottom:10px;border:none;border-radius:8px;">
+<input type="text" placeholder="Enter Address" style="width:100%;padding:12px;margin-bottom:10px;border:none;border-radius:8px;">
+<button onclick="completePayment()" style="padding:12px 18px;border:none;border-radius:8px;background:#7000ff;color:white;font-weight:bold;cursor:pointer;">Pay Now</button>
+</div>
+</section><footer>
+<h3>OM GAMERS HUB</h3>
+<p>Email: oms977059@gmail.com | Phone: 7982917803</p>
+</footer><script>
+let cart=[];
+let wishlist=[];
+
+function showPage(page){
+ document.querySelectorAll('section').forEach(sec=>sec.style.display='none');
+ document.getElementById(page).style.display='block';
+ window.scrollTo(0,0);
+}
+
+function addToCart(name,price){
+ cart.push({name,price});
+ document.getElementById('cartCount').innerText=cart.length;
+ renderCart();
+ alert(name+' added to cart');
+}
+
+function renderCart(){
+ let html='';
+ let total=0;
+ cart.forEach((item,index)=>{
+   html += `<p>${item.name} - ₹${item.price} <button onclick="removeCart(${index})">Remove</button></p>`;
+   total += item.price;
+ });
+ document.getElementById('cartItems').innerHTML = html || 'Cart is empty';
+ document.getElementById('totalPrice').innerText='Total: ₹'+total;
+}
+
+function removeCart(index){cart.splice(index,1);document.getElementById('cartCount').innerText=cart.length;renderCart();}
+
+function addWishlist(name){
+ wishlist.push(name);
+ document.getElementById('wishlistCount').innerText=wishlist.length;
+ renderWishlist();
+}
+
+function renderWishlist(){
+ let html='';
+ wishlist.forEach((item,index)=>{
+   html += `<p>${item} <button onclick="removeWish(${index})">Remove</button></p>`;
+ });
+ document.getElementById('wishlistItems').innerHTML = html || 'No saved items';
+}
+
+function removeWish(index){wishlist.splice(index,1);document.getElementById('wishlistCount').innerText=wishlist.length;renderWishlist();}
+
+function showPayment(){
+ if(cart.length===0){alert('Add items to cart first'); return;}
+ document.getElementById('paymentBox').style.display='block';
+}
+
+function completePayment(){
+ alert('Payment Successful! Your order has been placed.');
+ cart=[];
+ document.getElementById('cartCount').innerText=0;
+ renderCart();
+ document.getElementById('paymentBox').style.display='none';
+}
+
+const slider=document.getElementById('slider');
+setInterval(()=>{
+ if(slider.scrollLeft >= slider.scrollWidth-slider.clientWidth-20){slider.scrollTo({left:0,behavior:'smooth'});} 
+ else {slider.scrollBy({left:370,behavior:'smooth'});} 
+},3000);
+</script></body>
+</html>
